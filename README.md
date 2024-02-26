@@ -1,8 +1,15 @@
-örnek .env dosyası
-`docker compose up` yapıldığında önce hata veriyor directus'u ayrıca başlatmak gerekiyor
-WARN: Some tables and columns do not match your database's default collation (utf8mb4_general_ci):
+# MARIADB  Kullanılarak  Directus compose dosyası
 
+`docker compose up` yapıldığında önce hata veriyor directus'u ayrıca başlatmak gerekiyor.
+verilen hata:
+
+```bash
+WARN: Some tables and columns do not match your database's default collation (utf8mb4_general_ci):
 ```
+
+## Örnek `.env` dosyası
+
+```js
 KEY=58106b34-2963-412e-9521-a371c70188e5
 SECRET=141f2ca3-ff79-436d-8d90-4edd6d974ac9
 ADMIN_EMAIL=admin@mail.com
