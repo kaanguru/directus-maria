@@ -1,0 +1,21 @@
+services:
+  database:
+    image: mariadb
+    container_name: mardb
+    volumes:
+      - data:/var/lib/mysql
+    env_file:
+      - .env
+  directus:
+    image: directus/directus
+    container_name: dirmar
+    ports:
+      - 8055:8055
+    volumes:
+      - ./uploads:/directus/uploads
+    depends_on:
+      - database
+    env_file:
+      - .env
+volumes:
+  data:
